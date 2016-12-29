@@ -11,8 +11,4 @@ import com.hrs.backupserver.entity.Client;
 @Configuration
 public class EntityConfig {
 	
-	@Bean(name="clients")
-	public List<Client> clients(){
-		return new ArrayList<Client>();
-	}
 }

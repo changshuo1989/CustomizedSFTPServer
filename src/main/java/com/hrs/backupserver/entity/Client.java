@@ -6,69 +6,64 @@ public class Client {
 	private Integer port;
 	private String username;
 	private String password;
-	private String knownHostsFile;
-	private String identityFile;
-	private String sourceDirectory;
+	private String srcpath;
+	private String destpath;
 	private Integer interval;
 	
 	public Client() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Client(String host, int port, String username, String password, String knownHostsFile, String identityFile, String sourceDirectory, int interval) {
+	public Client(String host, int port, String username, String password, String srcpath, String destpath, int interval) {
 		super();
 		this.host = host;
 		this.port = port;
 		this.username = username;
 		this.password = password;
-		this.knownHostsFile = knownHostsFile;
-		this.identityFile = identityFile;
-		this.sourceDirectory=sourceDirectory;
+		this.srcpath=srcpath;
+		this.destpath=destpath;
 		this.interval=interval;
 	}
 	
-	public Client(String host, String username, String password, String knownHostsFile, String identityFile, String sourceDirectory, int interval) {
+	public Client(String host, String username, String password, String srcpath, String destpath, int interval) {
 		super();
 		this.host = host;
 		this.port = 22;
 		this.username = username;
 		this.password = password;
-		this.knownHostsFile = knownHostsFile;
-		this.identityFile = identityFile;
-		this.sourceDirectory=sourceDirectory;
+		this.srcpath=srcpath;
+		this.destpath=destpath;
 		this.interval=interval;
 	}
-	public Client(int id, String host, int port, String username, String password, String knownHostsFile, String identityFile, String sourceDirectory, int interval) {
+	public Client(int id, String host, int port, String username, String password, String srcpath, String destpath, int interval) {
 		super();
 		this.id = id;
 		this.host = host;
 		this.port = port;
 		this.username = username;
 		this.password = password;
-		this.knownHostsFile = knownHostsFile;
-		this.identityFile = identityFile;
-		this.sourceDirectory=sourceDirectory;
+		this.srcpath=srcpath;
+		this.destpath=destpath;
 		this.interval=interval;
 	}
 	
-	public Client(int id, String host, String username, String password, String knownHostsFile, String identityFile, String sourceDirectory, int interval) {
+	public Client(int id, String host, String username, String password, String srcpath, String destpath, int interval) {
 		super();
 		this.id = id;
 		this.host = host;
 		this.port = 22;
 		this.username = username;
 		this.password = password;
-		this.knownHostsFile = knownHostsFile;
-		this.identityFile = identityFile;
-		this.sourceDirectory=sourceDirectory;
+		this.srcpath=srcpath;
+		this.destpath=destpath;
 		this.interval=interval;
 	}
-	
+
 	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -84,7 +79,7 @@ public class Client {
 		return port;
 	}
 
-	public void setPort(int port) {
+	public void setPort(Integer port) {
 		this.port = port;
 	}
 
@@ -104,36 +99,27 @@ public class Client {
 		this.password = password;
 	}
 
-	public String getKnownHostsFile() {
-		return knownHostsFile;
+	public String getSrcpath() {
+		return srcpath;
 	}
 
-	public void setKnownHostsFile(String knownHostsFile) {
-		this.knownHostsFile = knownHostsFile;
+	public void setSrcpath(String srcpath) {
+		this.srcpath = srcpath;
 	}
 
-	public String getIdentityFile() {
-		return identityFile;
+	public String getDestpath() {
+		return destpath;
 	}
 
-	public void setIdentityFile(String identityFile) {
-		this.identityFile = identityFile;
-	}
-
-	public String getSourceDirectory() {
-		return sourceDirectory;
-	}
-
-	public void setSourceDirectory(String sourceDirectory) {
-		this.sourceDirectory = sourceDirectory;
+	public void setDestpath(String destpath) {
+		this.destpath = destpath;
 	}
 
 	public Integer getInterval() {
 		return interval;
 	}
 
-	public void setInterval(int interval) {
+	public void setInterval(Integer interval) {
 		this.interval = interval;
 	}
-	
 }
