@@ -1,6 +1,9 @@
 package com.hrs.backupserver.service;
 
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -9,6 +12,15 @@ import com.hrs.backupserver.entity.Client;
 public class ClientService {
 	@Autowired
 	List<Client> clients;
+	
+	
+	ExecutorService executor;
+	
+	
+	public ClientService(){
+		executor=Executors.newCachedThreadPool();
+		
+	}
 	
 	
 	public List<Client> getClients(){

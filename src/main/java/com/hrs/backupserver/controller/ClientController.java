@@ -26,13 +26,11 @@ public class ClientController {
 	
 	@RequestMapping(value="", method=RequestMethod.PUT)
 	public boolean insertClient(@RequestBody(required=false) Client clientRep){
-		
 		return clientService.insertClient(clientRep);
 	}
 	
 	@RequestMapping(value="",method=RequestMethod.POST)
 	public boolean updateClient(@RequestBody(required=false) Client clientRep){
-		
 		return clientService.updateClient(clientRep);
 	}
 }

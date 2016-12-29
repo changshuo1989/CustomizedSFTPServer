@@ -3,17 +3,19 @@ package com.hrs.backupserver.entity;
 public class Client {
 	private Integer id;
 	private String host;
-	private int port;
+	private Integer port;
 	private String username;
 	private String password;
 	private String knownHostsFile;
 	private String identityFile;
+	private String sourceDirectory;
+	private Integer interval;
 	
 	public Client() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Client(String host, int port, String username, String password, String knownHostsFile, String identityFile) {
+	public Client(String host, int port, String username, String password, String knownHostsFile, String identityFile, String sourceDirectory, int interval) {
 		super();
 		this.host = host;
 		this.port = port;
@@ -21,9 +23,11 @@ public class Client {
 		this.password = password;
 		this.knownHostsFile = knownHostsFile;
 		this.identityFile = identityFile;
+		this.sourceDirectory=sourceDirectory;
+		this.interval=interval;
 	}
 	
-	public Client(String host, String username, String password, String knownHostsFile, String identityFile) {
+	public Client(String host, String username, String password, String knownHostsFile, String identityFile, String sourceDirectory, int interval) {
 		super();
 		this.host = host;
 		this.port = 22;
@@ -31,8 +35,10 @@ public class Client {
 		this.password = password;
 		this.knownHostsFile = knownHostsFile;
 		this.identityFile = identityFile;
+		this.sourceDirectory=sourceDirectory;
+		this.interval=interval;
 	}
-	public Client(int id, String host, int port, String username, String password, String knownHostsFile, String identityFile) {
+	public Client(int id, String host, int port, String username, String password, String knownHostsFile, String identityFile, String sourceDirectory, int interval) {
 		super();
 		this.id = id;
 		this.host = host;
@@ -41,9 +47,11 @@ public class Client {
 		this.password = password;
 		this.knownHostsFile = knownHostsFile;
 		this.identityFile = identityFile;
+		this.sourceDirectory=sourceDirectory;
+		this.interval=interval;
 	}
 	
-	public Client(int id, String host, String username, String password, String knownHostsFile, String identityFile) {
+	public Client(int id, String host, String username, String password, String knownHostsFile, String identityFile, String sourceDirectory, int interval) {
 		super();
 		this.id = id;
 		this.host = host;
@@ -52,6 +60,8 @@ public class Client {
 		this.password = password;
 		this.knownHostsFile = knownHostsFile;
 		this.identityFile = identityFile;
+		this.sourceDirectory=sourceDirectory;
+		this.interval=interval;
 	}
 	
 	public Integer getId() {
@@ -70,7 +80,7 @@ public class Client {
 		this.host = host;
 	}
 
-	public int getPort() {
+	public Integer getPort() {
 		return port;
 	}
 
@@ -109,4 +119,21 @@ public class Client {
 	public void setIdentityFile(String identityFile) {
 		this.identityFile = identityFile;
 	}
+
+	public String getSourceDirectory() {
+		return sourceDirectory;
+	}
+
+	public void setSourceDirectory(String sourceDirectory) {
+		this.sourceDirectory = sourceDirectory;
+	}
+
+	public Integer getInterval() {
+		return interval;
+	}
+
+	public void setInterval(int interval) {
+		this.interval = interval;
+	}
+	
 }
